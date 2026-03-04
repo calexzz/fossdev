@@ -1,7 +1,7 @@
 import sys
 sys.path.append('../src')
 
-from math_demo import add, add_with_bug, add_something
+from math_demo import add, add_with_bug, add_something, calculate_tax_with_bug
 
 def test_addition_basic():
     assert add(2,2) == 4, "Function didn't returned 4"
@@ -51,6 +51,13 @@ def test_add_something_reasonable():
     assert add_something("xyz", "abc") == "xyzabc"
     print("Test ANOTHER ADDITION REASONABLE PASSED")
 
+def test_tax_calculation():
+    assert calculate_tax_with_bug(1000) == 150
+    assert calculate_tax_with_bug(2000) == 300
+    assert calculate_tax_with_bug(30) == 4.5
+    assert calculate_tax_with_bug(1) == .15
+    print("Test TAX CALCULATION PASSED")
+
 if __name__ == '__main__':
     test_addition_basic()
     test_bug_addition_notsufficent()
@@ -58,3 +65,4 @@ if __name__ == '__main__':
     test_bug_addition_enough()
     test_addition_reasonable()
     test_add_something_reasonable()
+    test_tax_calculation()
