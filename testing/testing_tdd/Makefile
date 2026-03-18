@@ -1,4 +1,4 @@
-.PHONY: create-structure test-pytest install install-dep
+.PHONY: create-structure test-pytest install install-dep checkdep
 
 create-structure:
 	mkdir -p src docs tests
@@ -12,7 +12,12 @@ install:
 install-dep:
 	pip install -r requirements.txt
 
+checkdep:
+	pip install pipreqs
+
+
 test-pytest:
 	pytest
+	matplotlib
 
 test: install-dep install test-pytest
