@@ -21,7 +21,7 @@ A small collection of date utility functions with no external dependencies.
 
 From test.pypi.org:
 ```bash
-pip install --index-url https://test.pypi.org/simple/ datetools
+pip install --index-url https://test.pypi.org/simple/ datetoools
 ```
 
 From the repository:
