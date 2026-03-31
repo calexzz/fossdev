@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "datetoools"
+version = "0.1.0"
+description = "A small collection of date utility functions: leap year, weekday, days diff, age"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.13"
+authors = [
+    { name = "calexzz" },
+]
+keywords = ["date", "datetime", "leap year", "weekday", "utilities"]
+
+[project.urls]
+Homepage = "https://github.com/calexzz/fossdev"
+Repository = "https://github.com/calexzz/fossdev"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "mypy>=1.0",
+    "flake8>=6.0",
+    "build>=1.0",
+    "twine>=4.0",
+]
+
+[tool.mypy]
+python_version = "3.8"
+strict = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
