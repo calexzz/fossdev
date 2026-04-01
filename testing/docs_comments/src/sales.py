@@ -14,7 +14,14 @@ def _row(x):
 
     return {"n": n, "c": c, "a": a, "q": q}  # make dict
 
-def _parse_record(line: str):
+def _parse_record(line: str) -> dict | None:
+    """Parse data from one sale record.
+
+    :param:
+        line:  record on one sale that come from line
+    :return:
+        Data of one sale in form of dict on None if validation fails
+    """
     sale = line.strip().split(",")
     if len(sale) != 4:  # according to spec each line must have 4 columns
         return None
