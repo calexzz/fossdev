@@ -43,6 +43,13 @@ def _parse_record(line: str) -> dict | None:
 
 
 def read_data(path):
+    """Parse data from one sale record.
+
+        :param:
+            line:  record on one sale that come from line
+        :return:
+            Data of one sale in form of dict on None if validation fails
+    """
     res = []  # final list
     with open(path, "r", encoding="utf-8") as f:  # open file
         for x in f:  # go over lines
