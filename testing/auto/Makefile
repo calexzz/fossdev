@@ -1,0 +1,8 @@
+.PHONY: create-structure test-pytest
+
+create-structure:
+	mkdir -p src docs tests
+	touch docs/DOMAIN.md
+	touch src/.geetkeep tests/.gitkeep
+	touch requirements.txt setup.py README.md
+
